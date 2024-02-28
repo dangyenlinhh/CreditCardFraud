@@ -7,7 +7,7 @@
 
 **Linkedln**: https://www.linkedin.com/in/dangyenlinhh/
 
-Tableau public link: https://tabsoft.co/49iWhF1 
+Tableau Public link: [CreditCardFraud](https://public.tableau.com/app/profile/linh.dang.yen/viz/CreditCardFraud_17056770323210/Story1)
 
 SQL link:
 
