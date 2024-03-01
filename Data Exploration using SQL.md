@@ -13,63 +13,60 @@
 ```` SQL
 CREATE SCHEMA fraudTrain;
 
--- Create five tables we are going to import of csv data into.
+-- Create five tables where we are going to import CSV data.
 
 -- Merchant table
 DROP TABLE IF EXISTS fraudTrain.merchant;
-
 CREATE TABLE fraudTrain.merchant(
 	merchant_id VARCHAR(255) PRIMARY KEY,
 	merchant_name VARCHAR(255),
-	catergory VARCHAR(255),
+	category VARCHAR(255),
 	lat DOUBLE PRECISION,
 	long DOUBLE PRECISION,
 	created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- State name table
+DROP TABLE IF EXISTS fraudTrain.state;
+CREATE TABLE fraudTrain.state(
+	state CHAR(2) PRIMARY KEY,
+	state_name VARCHAR(255)
+);
 -- Customer table 
-DROP TABLE IF EXISTS fraudTrain.customers(
+DROP TABLE IF EXISTS fraudTrain.customers;
+CREATE TABLE fraudTrain.customers(
 	customer_id BIGINT PRIMARY KEY,
 	first_name VARCHAR(100),
 	last_name VARCHAR(100),
 	gender CHAR(1),
 	street VARCHAR(255),
 	city VARCHAR(100),
-	state VARCHAR(100),
 	zip VARCHAR(10),
 	lat DOUBLE PRECISION,
 	long DOUBLE PRECISION,
 	city_pop INT,
 	job VARCHAR(255),
 	dob DATE,
-	created_date TIMESTAMP DEFAULT CRRENT_TIMESTAMP,
-	updated_date TIMESTAMP
+	created_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	updated_date TIMESTAMP,
+	state VARCHAR(100) REFERENCES fraudTrain.state(state)
 );
 
 -- Transaction table
-DROP TABLE IF EXISTS frauTrain.transaction
-
+DROP TABLE IF EXISTS frauTrain.transaction;
 CREATE TABLE fraudTrain.transaction(
 	transaction_id VARCHAR(255) PRIMARY KEY,
 	transaction_date TIMESTAMP,
 	amount DECIMAL(10,2),
 	unix_time BIGINT,
-	merchant_id VARCHAR(255) REFERENCES fraudTrain.merchant(merchant_id)
+	merchant_id VARCHAR(255) REFERENCES fraudTrain.merchant(merchant_id),
 	customer_id BIGINT REFERENCES fraudTrain.customers(customer_id)
 );
 
 -- fraud_transaction table
-DROP TABLE IF EXISTS fraudTrain.fraud_transaction
+DROP TABLE IF EXISTS fraudTrain.fraud_transaction;
 CREATE TABLE fraudTrain.fraud_transaction(
 	transaction_id VARCHAR(255) PRIMARY KEY REFERENCES fraudTrain.transaction(transaction_id)
-);
-
--- Country name table
-DROP TABLE IF EXISTS fraudTrain.country
-	
-CREATE TABLE fraudTrain.country(
-	countryname VARCHAR(255),
-	state CHAR(2)
 );
 
 ````
