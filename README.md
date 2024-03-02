@@ -7,11 +7,11 @@
 
 **Linkedln**: https://www.linkedin.com/in/dangyenlinhh/
 
-Tableau Public link: [CreditCardFraud by Tableau](https://public.tableau.com/app/profile/linh.dang.yen/viz/CreditCardFraud_17056770323210/Story1)
+*Tableau Public link:* [CreditCardFraud by Tableau](https://public.tableau.com/app/profile/linh.dang.yen/viz/CreditCardFraud_17056770323210/Story1)
 
-SQL link: [CreditCardFraud by SQL](https://github.com/dangyenlinhh/CreditCardFraud/blob/main/Data%20Exploration%20using%20SQL.md)
+*SQL link:* [CreditCardFraud by SQL](https://github.com/dangyenlinhh/CreditCardFraud/blob/main/Data%20Exploration%20using%20SQL.md)
 
-Python link: [CreditCardFraud by Python]()
+*Python link:* [CreditCardFraud by Python]()
 
 ![](images/background.jpg)
 
