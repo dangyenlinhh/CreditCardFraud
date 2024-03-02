@@ -6,7 +6,7 @@
 
 **Linkedln**: https://www.linkedin.com/in/dangyenlinhh/
 
-*Explore the full interactive experience and uncover hidden insights in my dashboards by visiting **My tableau Public link** https://tabsoft.co/49iWhF1k. Thank you!*
+*Explore the full interactive experience and uncover hidden insights in my dashboards by visiting **My tableau Public link** [CreditCardFraud](https://public.tableau.com/app/profile/linh.dang.yen/viz/CreditCardFraud_17056770323210/Story1). Thank you!*
 
 To enable businesses to grasp the behaviors and trends of potential fraudsters, I've meticulously constructed a comprehensive dashboard system, featuring:
 
