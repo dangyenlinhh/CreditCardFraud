@@ -74,7 +74,7 @@ CREATE TABLE fraudTrain.fraud_transaction(
 
 ````sql
 -- NON FRAUD
-CREATE TEMPORARY TABLE nonFraud AS (
+CREATE VIEW nonFraud AS (
 	SELECT T.transaction_id,transaction_date, merchant_id,customer_id,amount,unix_time
 	FROM fraudTrain.transaction AS T
 	LEFT JOIN fraudTrain.fraud_transaction AS F
@@ -83,7 +83,7 @@ CREATE TEMPORARY TABLE nonFraud AS (
 );
 
 -- FRAUD 
-CREATE TEMPORARY TABLE fraud AS(
+CREATE VIEW fraud AS(
 	SELECT T.transaction_id,transaction_date, merchant_id,customer_id,amount,unix_time
 	FROM fraudTrain.transaction AS T
 	JOIN fraudTrain.fraud_transaction AS F
