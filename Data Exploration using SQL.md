@@ -70,7 +70,7 @@ CREATE TABLE fraudTrain.fraud_transaction(
 );
 
 ````
-### Create Temp Table
+### Create VIEW
 
 ````sql
 -- NON FRAUD
